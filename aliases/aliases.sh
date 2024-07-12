@@ -13,12 +13,11 @@ alias srch='apt-cache search'
 alias sair='sudo apt-get install'
 
 # Unix
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
 alias hid='ls -ld .?*'
 alias cls='clear'
 alias ll='ls -l --color=auto'
 alias vi='/opt/bin/vim'
+alias nvi='/opt/bin/nvim'
 alias x='exit'
+alias root='sudo su -'
 
