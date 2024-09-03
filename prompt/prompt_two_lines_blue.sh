@@ -9,4 +9,9 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 SERVER_NAME="$Cyan""$SERVER_NAME""$Color_Off"
 
-PS1="\n\[\033[1;34m\]\342\226\210\342\226\210 \u @ $SERVER_NAME""$BBlue"" \w""$Color_Off  \n\[\033[0;36m\]\342\226\210\342\226\210 \d \t $ \[\033[0;39m\]"
+# Function to show git branch
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+PS1="\n\[\033[1;34m\]\342\226\210\342\226\210 \u @ $SERVER_NAME""$BBlue"" \w""$Color_Off  \n\[\033[0;36m\]\342\226\210\342\226\210 \d \t $(parse_git_branch) $ \[\033[0;39m\]"

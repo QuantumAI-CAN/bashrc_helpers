@@ -15,7 +15,7 @@ then
 	base=$(basename "$f" | sed 's|^./||')
 #	echo $base; exit
 	newbase="${base// /.}"
-        newFileName=$(remove-space.sh "$newbase")
+        newFileName=$(/home/admin/bashrc_helpers/scripts/Remove-Space.sh "$newbase")
         mv "$(dirname "$f" | sed 's|^./||')/$(basename "$f")" "$(dirname "$f" | sed 's|^./||')/$newFileName";
   done
 else

@@ -21,3 +21,9 @@ alias nvi='/opt/bin/nvim'
 alias x='exit'
 alias root='sudo su -'
 
+
+alias 1c='cd /home/admin/Website-Making/NodeJs-Projects/first-choice'
+alias flicks='cd /volume1/Movies/English/'
+alias dow='cd /volume1/Download/flicks'
+alias dotfiles='cd /home/admin/bashrc_helpers'
+alias moveflicks='mv /volume1/Download/flicks/* /volume1/Movies/English/'

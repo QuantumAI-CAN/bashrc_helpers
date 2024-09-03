@@ -13,7 +13,7 @@ then
  find . \( -name "* *" -o -name "*\[*" -o -name "*\(*" -o -name "*-*" -o -name "*_*" -o -name "*=*" \)|awk '{print $0}' | sort -nr |grep -v 'DS_Store'|\
   while read f; do 
 	base=$(basename "$f")
-        newFileName=$(remove-space.sh "$base")
+        newFileName=$(/home/admin/bashrc_helpers/scripts/Remove-Space.sh "$base")
         mv "$(dirname "$f")/$(basename "$f")" "$(dirname "$f")/$newFileName";
   done
 else

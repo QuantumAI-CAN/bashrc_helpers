@@ -17,7 +17,7 @@ then
  echo "Creating Folder and Moving mkv files, Please Wait......"
     for file in *.mkv; do
        base_folder=$(basename "$file" ".mkv")
-       NewFolder=$(remove-space.sh "$base_folder")
+       NewFolder=$(/home/admin/bashrc_helpers/scripts/Remove-Space.sh "$base_folder")
 #       mkdir -p "${folder}" && mv "${folder}".* "${folder}"
        mkdir -p "${NewFolder}" && mv "${base_folder}".* "${NewFolder}"
     done
