@@ -56,8 +56,11 @@ colorize_prompt() {
 }
 
 color_support='true'
+#Mac IP address
+ipadd=$(ifconfig en0 |grep 'inet' |grep -v inet6 |awk '{print $2}')
+
 #ipadd=$(ifconfig ens192 |grep 'inet addr' |awk '{print $2}' | awk -F':' '{print $2}')
-ipadd=$(ifconfig eth2 |grep 'inet addr' |awk '{print $2}' | awk -F':' '{print $2}')
+#ipadd=$(ifconfig eth2 |grep 'inet addr' |awk '{print $2}' | awk -F':' '{print $2}')
 #ipadd=$(ifconfig eth1 |grep inet |grep -v inet6|awk '{print $2}')
 # Main prompt
 #PS1="$(colorize_prompt "[" yellow bold) $(colorize_prompt "\u" purple bold) $(colorize_prompt "on" yellow bold) $(colorize_prompt "\h" yellow bold) $(colorize_prompt "\d" purple bold) $(colorize_prompt "\T" purple bold) $(colorize_prompt "]" yellow bold)\n$(colorize_prompt "[" yellow bold) $(colorize_prompt "\u" green bold)$(colorize_prompt "@" purple bold)$(colorize_prompt "$ipadd:" cyan bold)$(colorize_prompt "\w" green bold) $(colorize_prompt "]" yellow bold)# "

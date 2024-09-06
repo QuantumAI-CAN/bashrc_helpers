@@ -13,7 +13,7 @@ Usage
 
 Include `helpers.sh` in your `.bashrc`:
 
-    source /home/adam/bashrc_helpers/helpers.sh
+    source /Users/iqbalaulakh/bashrc_helpers/helpers.sh
 
 Edit `helpers.sh` to tweak settings.
 

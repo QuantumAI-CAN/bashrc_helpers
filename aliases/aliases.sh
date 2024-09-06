@@ -9,21 +9,18 @@ alias wgeto='wget -qO- '	     # wget to standard output
 alias tailf='tail -f '		     
 
 # Ubuntu
-alias srch='apt-cache search'
-alias sair='sudo apt-get install'
+#alias srch='apt-cache search'
+#alias sair='sudo apt-get install'
 
 # Unix
 alias hid='ls -ld .?*'
 alias cls='clear'
 alias ll='ls -l --color=auto'
-alias vi='/opt/bin/vim'
+alias vi='/usr/bin/vim"
 alias nvi='/opt/bin/nvim'
 alias x='exit'
 alias root='sudo su -'
+alias rscp='rsync -aP'
+alias rsmv='rsync -aP --remove-source-files'
 
-
-alias 1c='cd /home/admin/Website-Making/NodeJs-Projects/first-choice'
-alias flicks='cd /volume1/Movies/English/'
-alias dow='cd /volume1/Download/flicks'
-alias dotfiles='cd /home/admin/bashrc_helpers'
-alias moveflicks='mv /volume1/Download/flicks/* /volume1/Movies/English/'
+alias dotfiles='cd $HOME/bashrc_helpers'

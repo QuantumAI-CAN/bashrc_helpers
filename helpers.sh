@@ -5,9 +5,17 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+
+# This file is called first and this file will call other healper scripts.
+source $DIR/bash_profile/bash_profile 
+
 source $DIR/commands/ls_colors.sh
 source $DIR/aliases/aliases.sh
-source $DIR/prompt/prompt_two_lines_blue.sh
+#source $DIR/prompt/prompt_two_lines_blue.sh
+source $DIR/prompt/ps.sh
+
+source $DIR/history/history_settings.sh
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $DIR/history/history_settings.sh
 

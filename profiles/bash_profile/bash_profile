@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# source for bashrc_helper for all dotfiles
+
+source /Users/iqbalaulakh/bashrc_helpers/helpers.sh
+
+export PATH=$PATH:/Users/iqbalaulakh/:/Users/iqbalaulakh/Documents/:/Users/iqbalaulakh/bashrc_helpers/scripts
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
