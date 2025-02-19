@@ -10,6 +10,7 @@
 RmSpaceFromSting=$(echo "$1" \
  |sed 's/{/\./g'| sed 's/}/\./g' | sed 's/ /\./g' |sed 's/\:/./g' |sed 's/-/\./g' | sed 's/\.-\./\./g'| sed 's/\.\./\./g'  \
  |sed 's/,/./g' | sed 's/\[Hindi\]\.//g' | sed 's/(/\./g' |sed 's/)/\./g' | sed 's/\[//g' | sed 's/\]//g'| sed 's/\.\./\./g' \
+ |sed 's/\+/./g' | sed 's/\@/./g' | sed 's/\_/./g' | sed 's/\.\./\./g'|sed 's/=//g' | sed  's/\[-=BlacK_PearL=-\]/BlacK_PearL/g' |sed 's/\.$//g' \
  |sed 's/\+/./g' | sed 's/\@/./g' | sed 's/\_/./g' | sed 's/\.\./\./g'|sed 's/=//g' \
 # |awk 'BEGIN{FS=OFS="."} {for (i=1;i<NF;i++) {$i=toupper(substr($i,1,1)) tolower(substr($i,2))}}1' \
 # |awk 'BEGIN{FS=OFS="."} {for (i=1;i<NF;i++) {$i=toupper(substr($i,1,1)) substr($i,2)}}1' \

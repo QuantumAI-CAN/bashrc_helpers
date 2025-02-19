@@ -1,4 +1,5 @@
 #!/bin/bash
+source /home/admin/bashrc_helpers/prompt/prompt_common.sh
 
 ################################################################################################
 # Usage                 : Script to remove spaces and Replace by period (.) in all the Movies	#
@@ -14,11 +15,32 @@ doWork() {
 read -p "Are you sure you want to continue Creating Folder and Moving mkv files? <y/N> " prompt
 if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]]
 then
- echo "Creating Folder and Moving mkv files, Please Wait......"
+
+################################################################################################
+#
+# Create and Move *.mkv Files in Directory
+#
+################################################################################################
+
+ echo -e "$BGreen Creating Folder and Moving *.mkv files, Please Wait...... $Color_Off"
     for file in *.mkv; do
        base_folder=$(basename "$file" ".mkv")
        NewFolder=$(/home/admin/bashrc_helpers/scripts/Remove-Space.sh "$base_folder")
 #       mkdir -p "${folder}" && mv "${folder}".* "${folder}"
+       mkdir -p "${NewFolder}" && mv "${base_folder}".* "${NewFolder}"
+    done
+
+
+################################################################################################
+#
+# Create and Move *.mp4 Files in Directory
+#
+################################################################################################
+ 
+ echo -e "$BGreen Creating Folder and Moving *.mp4 files, Please Wait......$Color_Off"
+    for file in *.mp4; do
+       base_folder=$(basename "$file" ".mp4")
+       NewFolder=$(/home/admin/bashrc_helpers/scripts/Remove-Space.sh "$base_folder")
        mkdir -p "${NewFolder}" && mv "${base_folder}".* "${NewFolder}"
     done
 else

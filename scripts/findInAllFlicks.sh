@@ -22,5 +22,5 @@ if ! has-space "$1" ; then
   export fname
 fi
 
-find -L /volume1/Movies/* -type d -iname "*$fname*" -exec du -sh {} \; | grep -v backdrop
+find -L /volume1/Movies/* -type d -iname "*$fname*" -exec du -sh {} \; | grep -v backdrop | sort -k 2
 

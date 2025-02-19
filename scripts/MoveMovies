@@ -1,0 +1,22 @@
+#!/bin/bash
+
+################################################################################
+# Usage			:Script to Move given movie to /volume1/Movies/English/	#	
+# Author 		: Iqbal							#
+# Last Mofified Date	: 11-Nov-2024 						#
+################################################################################
+
+if [[ $# -ne 1 ]]; then
+	echo "Please Provide Movie Name in single quotes." >&2
+    	exit 1
+else	
+	moviename="$1"
+	echo -e  "Moving Movie:  [ $moviename ]   to  [  /volume1/Movies/English/  ]  \n "
+	mv "$moviename"  /volume1/Movies/English/
+		if [[ $? -eq 0 ]]; then
+			echo "[ Move Completed Successfully..Done ]"
+		else
+    			echo "Move Failed"
+		fi
+fi
+
