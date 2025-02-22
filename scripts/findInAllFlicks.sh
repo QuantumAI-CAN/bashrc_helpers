@@ -1,9 +1,9 @@
 #!/bin/bash -eu
 
 ########################################################################################
-# Usage			: Script to find specified movie name from /volumn1/Movies	#	
-# Author 		: Iqbal								#
-# Last Mofified Date	: 22-APR-2022 							#
+# Usage                 : Script to find specified movie name from /volumn1/Movies      #
+# Author                : Iqbal                                                         #
+# Last Mofified Date    : 22-APR-2022                                                   #
 ########################################################################################
 
 fname=
@@ -13,14 +13,14 @@ function has-space {
 }
 
 if has-space "$1"; then
-  fname=$(/home/admin/bashrc_helpers/scripts/Remove-Space.sh "$1")
+  fname=$(remove-spaces.sh "$1")
   export fname
 fi
 
 if ! has-space "$1" ; then
-  fname=$(/home/admin/bashrc_helpers/scripts/Remove-Space.sh "$1")
+  fname=$(remove-spaces.sh "$1")
   export fname
 fi
 
-find -L /volume1/Movies/* -type d -iname "*$fname*" -exec du -sh {} \; | grep -v backdrop
+find -L /Users/iqbalaulakh/All-Flicks/* -type d -iname "*$fname*" -exec du -sh {} \; | grep -v backdrop
 
