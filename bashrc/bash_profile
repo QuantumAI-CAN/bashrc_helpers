@@ -1,0 +1,4 @@
+#!/bin/bash
+bind -x '"\C-l": clear'
+
+set EDITOR=nvi
