@@ -15,3 +15,7 @@ alias ll='ls -l --color=auto'
 alias vi='/usr/bin/vim'
 alias x='exit'
 alias root='sudo su -'
+
+# Techiosoft related
+alias gi='cd ~/GitRepos-TechioSoft'
+alias t='cd ~/techiosoft'
